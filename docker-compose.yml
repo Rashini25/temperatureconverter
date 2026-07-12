@@ -1,0 +1,47 @@
+services:
+
+  mongodb:
+    image: mongo:8.0
+
+    container_name: temperature-mongodb
+
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - mongo-data:/data/db
+
+
+  app:
+    build: .
+
+    container_name: temperature-app
+
+    depends_on:
+      - mongodb
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/temp_db
+
+
+
+  frontend:
+    build:
+      context: ./frontend
+
+    container_name: temperature-frontend
+
+    depends_on:
+      - app
+
+    ports:
+      - "3000:80"
+
+
+
+volumes:
+
+  mongo-data:

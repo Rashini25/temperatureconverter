@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Converter Card -->
+    <div class="container">
+
+
+        <h1>
+            Temperature Converter
+        </h1>
+
+
+
+        <label>
+            Enter Temperature
+        </label>
+
+
+        <input 
+            type="number" 
+            id="temperatureInput"
+            placeholder="Enter value"
+        >
+
+
+
+        <label>
+            Select Unit
+        </label>
+
+
+        <select id="unitSelect">
+
+
+            <option value="Celsius">
+                Celsius
+            </option>
+
+
+            <option value="Fahrenheit">
+                Fahrenheit
+            </option>
+
+
+        </select>
+
+
+
+        <button id="convertBtn">
+            Convert
+        </button>
+
+
+
+        <h2>
+            Result:
+        </h2>
+
+
+
+        <p id="result">
+            -
+        </p>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- History Card -->
+    <div class="history-section">
+
+
+        <h2>
+            Conversion History
+        </h2>
+
+
+
+        <button id="historyBtn">
+            Load History
+        </button>
+
+
+
+
+        <!-- Filter Section -->
+
+        <h3>
+            Filter History
+        </h3>
+
+
+
+        <select id="filterUnit">
+
+
+            <option value="all">
+                All
+            </option>
+
+
+            <option value="Celsius">
+                Celsius
+            </option>
+
+
+            <option value="Fahrenheit">
+                Fahrenheit
+            </option>
+
+
+        </select>
+
+
+
+
+        <button id="filterBtn">
+            Filter
+        </button>
+
+
+
+
+
+        <!-- History Data -->
+
+        <div id="historyList">
+
+            No history loaded
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- Toast Message -->
+
+    <div id="toast">
+
+    </div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
